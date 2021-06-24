@@ -1,0 +1,298 @@
+[
+    {
+        "MarketPlace": [
+            "Ime MP",
+            " ki mora biti obenem tudi povezava"
+        ],
+        "Chain": [
+            "Na kateri verigi blokov temelji",
+            " lahko je >1"
+        ],
+        "Standard": [
+            "Kater ERC standard je v uporabi",
+            " lahko je >1"
+        ],
+        "Area": [
+            "Pokrita področja: Photo/Pic/Draw",
+            " Music",
+            " Video ..."
+        ],
+        "Operations": [
+            "Operacije",
+            " ki so omogočene z NFT-ji: Buy",
+            " Sell",
+            " Mint/Create",
+            " Bid"
+        ],
+        "Service_Fee": [
+            "Provizija",
+            " ki jo zaračunavajo"
+        ],
+        "Affiliate": [
+            "Ali ponujajo to možnost: Ja ali Ne",
+            " če je Ja potem mora biti Ja povezava t.j. link na opis kako deluje"
+        ],
+        "Login_Type": [
+            "Način prijave: seznam kripto denarnic in ostalih načinov za Prijavo"
+        ],
+        "Wallets": [
+            "Podprte kripto denarnice"
+        ],
+        "Compatibile": [
+            "Našteti morajo biti vsi MP-ji",
+            " s katerimi je predmetni MP združljiv. Vsak naštevek mora biti povezava na vrstico naštevanega MP-ja v tej tabeli."
+        ],
+        "File_Type": [
+            "Seznam podprtih datotek"
+        ],
+        "Max_File_Size": [
+            "Maksimalna velkost datotek"
+        ],
+        "External_Link": [
+            "Povezava na poljubno spletno mesto. Ja ali Ne"
+        ],
+        "Royalties": [
+            "Možnost tantiem Ja ali Ne ter razpon"
+        ],
+        "Royalties_Percentage": [
+            "Koliko odstotkov so lahko tantieme"
+        ],
+        "Split_Royalties": [
+            "Delitev tantiem med več ustvarjalci Ja ali Ne"
+        ],
+        "Number_of_Splits": [
+            "Maksimalno število delitev tantiem"
+        ],
+        "YouTube": [
+            "Povezava na naš YT kanal s posnetki ali seznam le teh",
+            " če le gre v neki obliki?"
+        ],
+        "TikTok": [
+            "Povezava na naš TT kanal s posnetki ali seznam le teh",
+            " če le gre v neki obliki?"
+        ],
+        "Medium": [
+            "Povezava na naš Medium s članki ali seznam le teh",
+            " če le gre v neki obliki?"
+        ],
+        "Operating_Token": [
+            "Informacija ali MP uporablja svoj operativni token & ime slednjega"
+        ]
+    },
+    {
+        "MarketPlace": [
+            "OpenSea"
+        ],
+        "Chain": [
+            "Ethereum"
+        ],
+        "Standard": [
+            "ERC 1155"
+        ],
+        "Area": [
+            "Image",
+            " Audio",
+            " Video",
+            " 3D Model"
+        ],
+        "Operations": [
+            "Mint/Create",
+            " Buy",
+            " Sell",
+            " Bid"
+        ],
+        "Service_Fee": 0.025,
+        "Affiliate": [
+            "Yes"
+        ],
+        "Login_Type": [
+            "Metamask"
+        ],
+        "Wallets": [
+            "Metamask"
+        ],
+        "Compatibile": [
+            "Rarible",
+            " Mintbase",
+            " Cargo",
+            " Mintable"
+        ],
+        "File_Type": [
+            "JPG",
+            " PNG",
+            " GIF",
+            " SWG",
+            " MP4",
+            " ..."
+        ],
+        "Max_File_Size": [
+            "100 Mb"
+        ],
+        "External_Link": [
+            "Yes"
+        ],
+        "Royalties": [
+            ""
+        ],
+        "Royalties_Percentage": [
+            ""
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Cargo"
+        ],
+        "Chain": [
+            "Ethereum",
+            " xDai",
+            " Polygon"
+        ],
+        "Standard": [
+            "ERC-721",
+            " ERC-2309"
+        ],
+        "Area": [
+            "Image",
+            " Audio",
+            " Video",
+            " and 3D files"
+        ],
+        "Operations": [
+            "Mint/Create",
+            " Buy",
+            " Sell",
+            " Manage"
+        ],
+        "Service_Fee": [
+            "??"
+        ],
+        "Affiliate": [
+            "??"
+        ],
+        "Login_Type": [
+            "Metamask"
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            ""
+        ],
+        "File_Type": [
+            ""
+        ],
+        "Max_File_Size": [
+            ""
+        ],
+        "External_Link": [
+            ""
+        ],
+        "Royalties": [
+            "Yes"
+        ],
+        "Royalties_Percentage": [
+            "Up to 15%"
+        ],
+        "Split_Royalties": [
+            "Yes"
+        ],
+        "Number_of_Splits": [
+            "Up to 15"
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Ethernity"
+        ],
+        "Chain": [
+            ""
+        ],
+        "Standard": [
+            ""
+        ],
+        "Area": [
+            ""
+        ],
+        "Operations": [
+            ""
+        ],
+        "Service_Fee": [
+            ""
+        ],
+        "Affiliate": [
+            ""
+        ],
+        "Login_Type": [
+            ""
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            ""
+        ],
+        "File_Type": [
+            ""
+        ],
+        "Max_File_Size": [
+            ""
+        ],
+        "External_Link": [
+            ""
+        ],
+        "Royalties": [
+            ""
+        ],
+        "Royalties_Percentage": [
+            ""
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ]
+    }
+]
