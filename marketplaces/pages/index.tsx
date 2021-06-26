@@ -32,7 +32,7 @@ interface MarketplaceObject {
   Operating_Token: Array<string>;
 }
 
-function HomePage({ marketplaces, columns }: MarketplacesColumns) {
+function MarketPlaces({ marketplaces, columns }: MarketplacesColumns) {
   return (
     <div className={styles["full-page"]}>
       <Head>
@@ -44,14 +44,15 @@ function HomePage({ marketplaces, columns }: MarketplacesColumns) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1 id="title">React Dynamic Table</h1>
-        <table id="students">
-          <tbody>
-            <tr> {renderTableHeader(columns)}</tr>
-            {renderTableData(marketplaces)}
-          </tbody>
-        </table>
+      <div className={styles["main-container"]}>
+        <div className="table-container">
+          <table>
+            <tbody>
+              <tr> {renderTableHeader(columns)}</tr>
+              {renderTableData(marketplaces)}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
@@ -151,4 +152,4 @@ const determineUrl = (
   return `${mainUrl}${endpoint}`;
 };
 
-export default HomePage;
+export default MarketPlaces;

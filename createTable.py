@@ -7,6 +7,10 @@ data = "data.xlsx"
 jsonData = "data.json"
 
 df = pd.read_excel(data).replace(np.nan, '', regex=True)
+
+# delete comment columns
+df = df.drop(df.columns[1], axis=1)
+
 json_list = json.loads(json.dumps(list(df.to_dict().values())))
 names, data = [], []
 for i in json_list[0]:
