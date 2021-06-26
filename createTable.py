@@ -17,7 +17,6 @@ for i in range(1,len(json_list)):
     tempObject = {}
     for k in row:
         value = row[k]
-        print(value)
         key=names[int(k)].replace(" ", "_").replace(".", "")
         if type(value) is str:
             if "," in value:
@@ -38,8 +37,12 @@ with open(jsonData, "w") as outfile:
 
 mongoDbClient = MongoClient("mongodb://localhost:27017/")
 mydb = mongoDbClient["NFTS"]
-mycol = mydb["NFT"]
-mycol.delete_many({})
+mycol1 = mydb["NFT"]
+mycol2 = mydb["columns"]
+mycol1.delete_many({})
+mycol2.delete_many({})
+
+mycol2.insert_one({ "columns": names })
 
 for i in data:
-    mycol.insert_one(i)
+    mycol1.insert_one(i)
