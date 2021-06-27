@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-interface MarketplacesColumns {
-  marketplaces: Array<any>;
+interface IMarketplacesColumns {
+  marketplaces: Array<IMarketplace>;
   columns: Array<string>;
 }
 
-interface MarketplaceObject {
+interface IMarketplace {
   _id: string;
   MarketPlace: Array<string>;
   Chain: Array<string>;
@@ -32,7 +32,7 @@ interface MarketplaceObject {
   Operating_Token: Array<string>;
 }
 
-function MarketPlaces({ marketplaces, columns }: MarketplacesColumns) {
+function MarketPlaces({ marketplaces, columns }: IMarketplacesColumns) {
   return (
     <div className={styles["full-page"]}>
       <Head>
@@ -84,62 +84,10 @@ const renderTableHeader = (columns: Array<string>) => {
   });
 };
 
-const renderTableData = (arrayElements: Array<MarketplaceObject>) => {
-  return arrayElements.map(
-    (
-      {
-        _id,
-        MarketPlace,
-        Chain,
-        Standard,
-        Area,
-        Operations,
-        Service_Fee,
-        Affiliate,
-        Login_Type,
-        Wallets,
-        Compatibile,
-        File_Type,
-        Max_File_Size,
-        External_Link,
-        Royalties,
-        Royalties_Percentage,
-        Split_Royalties,
-        Number_of_Splits,
-        YouTube,
-        TikTok,
-        Medium,
-        Operating_Token,
-      },
-      index
-    ) => {
-      return (
-        <tr key={index}>
-          <td>{MarketPlace}</td>
-          <td>{Chain}</td>
-          <td>{Standard}</td>
-          <td>{Area}</td>
-          <td>{Operations}</td>
-          <td>{Service_Fee}</td>
-          <td>{Affiliate}</td>
-          <td>{Login_Type}</td>
-          <td>{Wallets}</td>
-          <td>{Compatibile}</td>
-          <td>{File_Type}</td>
-          <td>{Max_File_Size}</td>
-          <td>{External_Link}</td>
-          <td>{Royalties}</td>
-          <td>{Royalties_Percentage}</td>
-          <td>{Split_Royalties}</td>
-          <td>{Number_of_Splits}</td>
-          <td>{YouTube}</td>
-          <td>{TikTok}</td>
-          <td>{Medium}</td>
-          <td>{Operating_Token}</td>
-        </tr>
-      );
-    }
-  );
+const renderTableData = (arrayElements: Array<IMarketplace>) => {
+  return arrayElements.map((marketplace: IMarketplace, index: number) => {
+    return <tr key={index}>{renderElementsByInterface(marketplace)}</tr>;
+  });
 };
 
 const determineUrl = (
@@ -150,6 +98,16 @@ const determineUrl = (
     throw new Error("No url or endpoint specified");
   }
   return `${mainUrl}${endpoint}`;
+};
+
+const renderElementsByInterface = (marketPlace: IMarketplace) => {
+  const marketPlacesArray = Object.entries(marketPlace);
+
+  return marketPlacesArray
+    .filter((el) => el[0] !== "_id")
+    .map((el, index) => {
+      return <td key={index}>{el[1]}</td>;
+    });
 };
 
 export default MarketPlaces;
