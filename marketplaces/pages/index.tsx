@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Marketplace.module.css";
 
 interface IMarketplacesColumns {
   marketplaces: Array<IMarketplace>;
@@ -46,11 +46,11 @@ function MarketPlaces({ marketplaces, columns }: IMarketplacesColumns) {
 
       <div className={styles["main-container"]}>
         <div className="table-container">
-          <table>
-            <tbody>
-              <tr> {renderTableHeader(columns)}</tr>
-              {renderTableData(marketplaces)}
-            </tbody>
+          <table className={styles.table}>
+            <thead className={styles.thead}>
+              <tr>{renderTableHeader(columns)}</tr>
+            </thead>
+            <tbody>{renderTableData(marketplaces)}</tbody>
           </table>
         </div>
       </div>
@@ -80,13 +80,21 @@ export async function getStaticProps() {
 const renderTableHeader = (columns: Array<string>) => {
   let header = Object.values(columns);
   return header.map((key, index) => {
-    return <th key={index}>{key.toUpperCase()}</th>;
+    return (
+      <th key={index} className={styles.th}>
+        {key.toUpperCase()}
+      </th>
+    );
   });
 };
 
 const renderTableData = (arrayElements: Array<IMarketplace>) => {
   return arrayElements.map((marketplace: IMarketplace, index: number) => {
-    return <tr key={index}>{renderElementsByInterface(marketplace)}</tr>;
+    return (
+      <tr className={styles.tr} key={index}>
+        {renderElementsByInterface(marketplace)}
+      </tr>
+    );
   });
 };
 
@@ -106,7 +114,11 @@ const renderElementsByInterface = (marketPlace: IMarketplace) => {
   return marketPlacesArray
     .filter((el) => el[0] !== "_id")
     .map((el, index) => {
-      return <td key={index}>{el[1]}</td>;
+      return (
+        <td className={styles.td} key={index}>
+          {el[1]}
+        </td>
+      );
     });
 };
 
