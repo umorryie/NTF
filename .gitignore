@@ -1,2 +1,4 @@
 mongodb
 */.env
+/nft-react/*
+node_modules

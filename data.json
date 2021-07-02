@@ -21,7 +21,9 @@
             " Sell",
             " Bid"
         ],
-        "Service_Fee": 0.025,
+        "Service_Fee": [
+            "0.025"
+        ],
         "Affiliate": [
             "Yes"
         ],
@@ -74,6 +76,9 @@
         ],
         "Operating_Token": [
             ""
+        ],
+        "Link": [
+            "https://opensea.io/"
         ]
     },
     {
@@ -148,6 +153,9 @@
         ],
         "Operating_Token": [
             ""
+        ],
+        "Link": [
+            "https://cargo.build/"
         ]
     },
     {
@@ -213,6 +221,9 @@
         ],
         "Operating_Token": [
             ""
+        ],
+        "Link": [
+            "https://ethernity.io/marketplace"
         ]
     }
 ]

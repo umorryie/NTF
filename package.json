@@ -1,0 +1,23 @@
+{
+  "name": "nft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"docker-compose up -d && python3 flaskApi.py \" \"cd marketplaces && npm run dev\"",
+    "dev": "docker-compose up -d && python3 flaskApi.py && cd marketplaces && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umorryie/NTF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umorryie/NTF/issues"
+  },
+  "homepage": "https://github.com/umorryie/NTF#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

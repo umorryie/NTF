@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Marketplace.module.css";
+import { useEffect, useState } from "react";
 
 interface IMarketplacesColumns {
   marketplaces: Array<IMarketplace>;
@@ -30,9 +31,19 @@ interface IMarketplace {
   TikTok: Array<string>;
   Medium: Array<string>;
   Operating_Token: Array<string>;
+  Link: Array<string>;
 }
 
 function MarketPlaces({ marketplaces, columns }: IMarketplacesColumns) {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+    });
+  });
+
   return (
     <div className={styles["full-page"]}>
       <Head>
@@ -44,20 +55,23 @@ function MarketPlaces({ marketplaces, columns }: IMarketplacesColumns) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles["main-container"]}>
-        <div className="table-container">
-          <table className={styles.table}>
-            <thead className={styles.thead}>
-              <tr>{renderTableHeader(columns)}</tr>
-            </thead>
-            <tbody>{renderTableData(marketplaces)}</tbody>
-          </table>
+      {width > 600 || true ? (
+        <div className={styles["main-container"]}>
+          <div className="table-container">
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>{renderTableHeader(columns)}</tr>
+              </thead>
+              <tbody>{renderShownAndHiddenTableData(marketplaces)}</tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }
 
+// Get backend data
 export async function getStaticProps() {
   const marketplaces = await fetch(
     determineUrl(process.env.URL, process.env.MARKETPLACES)
@@ -77,18 +91,23 @@ export async function getStaticProps() {
   };
 }
 
+// Create table header
 const renderTableHeader = (columns: Array<string>) => {
   let header = Object.values(columns);
   return header.map((key, index) => {
-    return (
-      <th key={index} className={styles.th}>
-        {key.toUpperCase()}
-      </th>
-    );
+    if (index < 7) {
+      return (
+        <th key={index} className={styles.th}>
+          {key.toUpperCase()}
+        </th>
+      );
+    }
+    return null;
   });
 };
 
-const renderTableData = (arrayElements: Array<IMarketplace>) => {
+// Render showing table body
+const renderShownTableData = (arrayElements: Array<IMarketplace>) => {
   return arrayElements.map((marketplace: IMarketplace, index: number) => {
     return (
       <tr className={styles.tr} key={index}>
@@ -98,6 +117,18 @@ const renderTableData = (arrayElements: Array<IMarketplace>) => {
   });
 };
 
+// Render hidden table FULL CONTENT body
+const renderFullTableData = (arrayElements: Array<IMarketplace>) => {
+  return arrayElements.map((marketplace: IMarketplace, index: number) => {
+    return (
+      <tr className={styles["hidden-tr"]} key={`${index}${index}`}>
+        {renderFullElementsByInterface(marketplace)}
+      </tr>
+    );
+  });
+};
+
+// Determine url for backend calls
 const determineUrl = (
   mainUrl: string | undefined,
   endpoint: string | undefined
@@ -108,18 +139,75 @@ const determineUrl = (
   return `${mainUrl}${endpoint}`;
 };
 
+// Render columns that derive from response interface IMarketplace
 const renderElementsByInterface = (marketPlace: IMarketplace) => {
   const marketPlacesArray = Object.entries(marketPlace);
+  const link = marketPlace.Link[0];
 
   return marketPlacesArray
-    .filter((el) => el[0] !== "_id")
+    .filter((el) => el[0] !== "_id" && el[0] !== "Link")
     .map((el, index) => {
-      return (
-        <td className={styles.td} key={index}>
-          {el[1]}
-        </td>
-      );
+      if (index < 7) {
+        const allElements =
+          el[1] instanceof Array
+            ? el[1].map((stringElement: string, index: number) => {
+                return (
+                  <div
+                    key={index}
+                    className={` ${styles["content-flex-container"]} ${styles["content-border-background"]}`}
+                  >
+                    {stringElement}
+                  </div>
+                );
+              })
+            : null;
+        switch (el[0]) {
+          case "MarketPlace":
+            return (
+              <td
+                className={`${styles["market-place-link"]} ${styles.td}`}
+                key={index}
+              >
+                <a href={link} target="_blank">
+                  {el[1][0]}
+                </a>
+              </td>
+            );
+
+          default:
+            return (
+              <td className={`${styles.td}`} key={index}>
+                {allElements}
+              </td>
+            );
+        }
+      }
+      return null;
     });
+};
+
+// Merge shown and hidden full table data
+const renderShownAndHiddenTableData = (marketplaces: IMarketplace[]) => {
+  let returningContent = [];
+  const fullHiddenContent = renderFullTableData(marketplaces);
+  const shownContent = renderShownTableData(marketplaces);
+
+  for (let i = 0; i < marketplaces.length; i++) {
+    returningContent.push(shownContent[i]);
+    returningContent.push(fullHiddenContent[i]);
+  }
+
+  return returningContent;
+};
+
+// TODO
+// Render full element for marketplace
+const renderFullElementsByInterface = (marketplace: IMarketplace) => {
+  return (
+    <td colSpan={7}>
+      <div className="full-element"></div>
+    </td>
+  );
 };
 
 export default MarketPlaces;

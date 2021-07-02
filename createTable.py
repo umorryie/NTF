@@ -28,7 +28,7 @@ for i in range(1,len(json_list)):
             else:
                 tempObject[key] = [value]
         else:
-            tempObject[key] = value
+            tempObject[key] = [str(value)]
 
     data.append(tempObject)
 
