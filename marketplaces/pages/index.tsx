@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../styles/Marketplace.module.css";
 import { useEffect, useState } from "react";
 
+const columnNumber = 7;
+
 interface IMarketplacesColumns {
   marketplaces: Array<IMarketplace>;
   columns: Array<string>;
@@ -95,7 +97,7 @@ export async function getStaticProps() {
 const renderTableHeader = (columns: Array<string>) => {
   let header = Object.values(columns);
   return header.map((key, index) => {
-    if (index < 7) {
+    if (index < columnNumber) {
       return (
         <th key={index} className={styles.th}>
           {key.toUpperCase()}
@@ -147,7 +149,7 @@ const renderElementsByInterface = (marketPlace: IMarketplace) => {
   return marketPlacesArray
     .filter((el) => el[0] !== "_id" && el[0] !== "Link")
     .map((el, index) => {
-      if (index < 7) {
+      if (index < columnNumber) {
         const allElements =
           el[1] instanceof Array
             ? el[1].map((stringElement: string, index: number) => {
@@ -204,7 +206,7 @@ const renderShownAndHiddenTableData = (marketplaces: IMarketplace[]) => {
 // Render full element for marketplace
 const renderFullElementsByInterface = (marketplace: IMarketplace) => {
   return (
-    <td colSpan={7}>
+    <td colSpan={columnNumber}>
       <div className="full-element"></div>
     </td>
   );
