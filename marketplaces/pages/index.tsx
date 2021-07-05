@@ -34,6 +34,7 @@ interface IMarketplace {
   Medium: Array<string>;
   Operating_Token: Array<string>;
   Link: Array<string>;
+  Purpose: Array<string>;
 }
 
 function MarketPlaces({ marketplaces, columns }: IMarketplacesColumns) {

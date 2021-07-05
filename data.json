@@ -3,6 +3,9 @@
         "MarketPlace": [
             "OpenSea"
         ],
+        "Purpose": [
+            "Art"
+        ],
         "Chain": [
             "Ethereum"
         ],
@@ -85,6 +88,9 @@
         "MarketPlace": [
             "Cargo"
         ],
+        "Purpose": [
+            "Art"
+        ],
         "Chain": [
             "Ethereum",
             " xDai",
@@ -162,6 +168,9 @@
         "MarketPlace": [
             "Ethernity"
         ],
+        "Purpose": [
+            "Art"
+        ],
         "Chain": [
             ""
         ],
@@ -224,6 +233,310 @@
         ],
         "Link": [
             "https://ethernity.io/marketplace"
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Crypto NFT"
+        ],
+        "Purpose": [
+            "Art"
+        ],
+        "Chain": [
+            "Crypto.com Chain"
+        ],
+        "Standard": [
+            "Unkonown"
+        ],
+        "Area": [
+            "Sports/Athletes",
+            " Pop Culture",
+            " Visual Arts",
+            " Other"
+        ],
+        "Operations": [
+            "Mint/Create",
+            " Buy",
+            " Sell"
+        ],
+        "Service_Fee": [
+            "??"
+        ],
+        "Affiliate": [
+            "No"
+        ],
+        "Login_Type": [
+            "Email/Pass"
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            ""
+        ],
+        "File_Type": [
+            ""
+        ],
+        "Max_File_Size": [
+            ""
+        ],
+        "External_Link": [
+            "No"
+        ],
+        "Royalties": [
+            ""
+        ],
+        "Royalties_Percentage": [
+            ""
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ],
+        "Link": [
+            ""
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Rarible"
+        ],
+        "Purpose": [
+            "Art"
+        ],
+        "Chain": [
+            "Ethereum"
+        ],
+        "Standard": [
+            "ERC-721",
+            " ERC 1155"
+        ],
+        "Area": [
+            "Image",
+            " Audio",
+            " Video"
+        ],
+        "Operations": [
+            "Mint/Create",
+            " Buy",
+            " Sell",
+            " Bid"
+        ],
+        "Service_Fee": [
+            "0.025"
+        ],
+        "Affiliate": [
+            "No"
+        ],
+        "Login_Type": [
+            "Metamask",
+            " Formatic",
+            " Coinbase Wallet",
+            " WalletConnect",
+            " MyEtherWallet",
+            " Torus"
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            "OpenSea"
+        ],
+        "File_Type": [
+            "PNG",
+            " GIF",
+            " WEBP",
+            " MP4",
+            " MP3"
+        ],
+        "Max_File_Size": [
+            "30 Mb"
+        ],
+        "External_Link": [
+            ""
+        ],
+        "Royalties": [
+            "Yes"
+        ],
+        "Royalties_Percentage": [
+            "10 - 30%"
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ],
+        "Link": [
+            ""
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Mintbase"
+        ],
+        "Purpose": [
+            ""
+        ],
+        "Chain": [
+            ""
+        ],
+        "Standard": [
+            ""
+        ],
+        "Area": [
+            ""
+        ],
+        "Operations": [
+            ""
+        ],
+        "Service_Fee": [
+            ""
+        ],
+        "Affiliate": [
+            ""
+        ],
+        "Login_Type": [
+            ""
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            ""
+        ],
+        "File_Type": [
+            ""
+        ],
+        "Max_File_Size": [
+            ""
+        ],
+        "External_Link": [
+            ""
+        ],
+        "Royalties": [
+            ""
+        ],
+        "Royalties_Percentage": [
+            ""
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ],
+        "Link": [
+            ""
+        ]
+    },
+    {
+        "MarketPlace": [
+            "Mintable"
+        ],
+        "Purpose": [
+            ""
+        ],
+        "Chain": [
+            ""
+        ],
+        "Standard": [
+            ""
+        ],
+        "Area": [
+            ""
+        ],
+        "Operations": [
+            ""
+        ],
+        "Service_Fee": [
+            ""
+        ],
+        "Affiliate": [
+            ""
+        ],
+        "Login_Type": [
+            ""
+        ],
+        "Wallets": [
+            ""
+        ],
+        "Compatibile": [
+            ""
+        ],
+        "File_Type": [
+            ""
+        ],
+        "Max_File_Size": [
+            ""
+        ],
+        "External_Link": [
+            ""
+        ],
+        "Royalties": [
+            ""
+        ],
+        "Royalties_Percentage": [
+            ""
+        ],
+        "Split_Royalties": [
+            ""
+        ],
+        "Number_of_Splits": [
+            ""
+        ],
+        "YouTube": [
+            ""
+        ],
+        "TikTok": [
+            ""
+        ],
+        "Medium": [
+            ""
+        ],
+        "Operating_Token": [
+            ""
+        ],
+        "Link": [
+            ""
         ]
     }
 ]
